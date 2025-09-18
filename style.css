@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+header{
+    width: 90%;
+    margin: auto;
+}
+
+header img{
+    height: 40px;
+    width: auto;
+    padding-top: 2em;
+
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
+h1{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-size: 5em;
+    font-weight: 400;
+    line-height: 0.8em;
+}
+
+h1 span {
+    font-weight: bold;
+}
+
+h2{
+  color: #D20094;
+  font-family: "Outfit", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.2em;  
+}
+
+p{
+ margin-top: 0;
+ margin-bottom: 3em;   
+}
+
+li{
+    line-height: 1.8em;  
+}
+
+li span{
+    font-weight: bold; 
+    
+}
+
+section {
+    width: 100%;
+    position: relative; /* Per permettere l'uso di position: absolute */
+    margin-top: 4em;
+    margin-bottom: 6em;
+}
+
+label {
+    display: inline-block; /* Rende la label un elemento inline-block per un posizionamento corretto */
+    margin-right: auto; /* Spinge la label a sinistra */
+}
+
+#casellacheckbox {
+    width: 1.3em;
+    height: 1.3em;
+    border: 2px solid white; 
+    background-color: transparent; 
+    appearance: none;
+    cursor: pointer; 
+    margin-top: 1.3em;
+    transform: translateY(0.2em); /* abbassa la checkbox */
+}
+
+#casellacheckbox:checked {
+    appearance: checkbox; 
+    background-color: transparent;
+}
+
+#buttonwelcomepage {
+    position: absolute; /* Posiziona il bottone in modo assoluto */
+    right: 0; /* Posiziona il bottone al bordo destro */
+    padding: 1em 3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: auto;
+    background-color: #00ffff;
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 1px 23px 5px #00FFFF;
+    border-style:initial;
+}
+
+/* PAGINA BENCHMARK */
+
+#question {
+    padding: 0 15%;
+    font-size: 3.5em;
+    line-height: 1em;
+    margin: 0;
+}
+
+#answers {
+    margin: auto; /* mette il blocco al centro della pagina in automatico */
+    text-align: center; /* centra gli elementi del blocco */
+    width: 800px; /* dimensione fissa per mantenere la stessa posizione su qualsiasi tipo di schermo */
+    padding: 2% 0; /* mette il 2% di padding sopra e sotto */
+}
+
+.answer {
+    background-color: #d2009327;
+    color: white;
+    width: 25em;
+    height: 5em;
+    margin: 2%;
+    border: solid rgba(255, 255, 255, 0.189);
+    border-radius: 5em;
+    font-weight: bold;
+}
+
+#cerchiotimer {
+    position: relative;
+    width: 6em; /* Diametro del cerchio */
+    height: 6em;
+    border-radius: 50%; /* Rende il cerchio */
+    background: conic-gradient(#00ffff 100%, #d3d3d3 0%); /* Inizializza il gradiente */
+    margin-left: 90%; /* Posizionamento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#cerchiotimer::before {
+    content: '';
+    position: absolute;
+    inset: 15%; /* Dimensione del foro interno */
+    background-color: rgb(90, 38, 118); /* Sfondo trasparente */
+    border-radius: 50%; /* Rende il foro interno rotondo */
+}
+  
+#timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8em; /* Dimensione del testo */
+    font-weight: bold;
+    color: white; /* Colore del testo */
+}
+
+main #numeroDomanda {
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    padding: 3em 0;
+    font-weight: 500;
+}
+
+
+/* PAGINA RISULTATI */
+
+#mainpag3{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    position: relative; 
+    height: auto;
+    text-align: center;
+}
+
+#sezionecentrale {
+    margin: 3em 0;
+}
+
+#titolopag3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#sottotitolopag3 {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+#spaziocorrette, #spaziosbagliate {
+  color: white;
+  float: left; 
+  width: 20%; 
+  text-align: left;
+  font-size: 3em;
+  font-weight: 300;
+  margin-top: 0;
+  vertical-align: middle;
+  padding-top: 1.6em;
+  line-height: 1.1em;
+}
+
+#correct, #wrong {
+    font-weight: bold;
+}
+
+#spaziosbagliate {
+    float: right;
+    text-align: right;
+    vertical-align: middle;  /* Allinea verticalmente al centro */
+    margin-top: -5.4em;  /* alza la riga perchè porta il margine in negativo */
+  }
+
+#quantitaGiuste, #quantitaSbagliate{
+    font-size: 0.4em;
+    vertical-align: middle;  /* Allinea verticalmente al centro */
+    display: inline-block;  /* Permette alla proprietà "vertical-align" di funzionare */
+    margin-top: -1.5em;  /* alza la riga perchè porta il margine in negativo */
+}
+
+#cerchio {
+    position: relative;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 20px solid transparent;
+    margin: 20px auto;
+}
+
+#cerchio::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    mask: radial-gradient(circle, transparent 60%, black 61%) /* Nasconde la parte centrale del cerchio per creare un effetto ad anello.*/
+}
+
+#congr {
+    color: white;
+    margin: 0 auto;
+    width: 70%; 
+    text-align: center; 
+    display: inline-block;
+    vertical-align: middle; 
+    padding-top: 3em;
+}  
+
+#congr1 {
+    margin: 0; 
+    font-size: 1em;
+    line-height: 1.5;
+}
+  
+#congr3 {
+      font-weight: 400;
+      font-size: 0.6em;
+}
+  
+#congr2 {
+    color: #00FFFF;
+    margin: 0; 
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+}
+
+#buttonrate {
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    padding: 0.8em 3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color: #d2009327;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#messaggiofallito {
+    padding-top: 3.5em;
+    font-size: 1.5em;
+}
+
+/* PAGINA FEEDBACK */
+
+#buttonMore {  
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    padding: 0.8em 3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color: #00ffff;
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 1px 23px 5px #00FFFF;
+    border-style:initial;
+}
+
+#mainPage4 {
+    text-align: center;
+
+}
+
+/* cambiare colore alle img (stelle) */
+.star {
+    cursor: pointer;
+    filter: grayscale(100%); /* Stelle non colorate, effetto grigio */
+    transition: filter 0.2s ease; /* Animazione per un cambiamento più fluido */
+}
+
+.star.active {
+    filter: grayscale(0%); /* Stelle attive, colorate */
+}
+
+#commento {
+    background-color: rgba(255, 255, 255, 0); /* rende lo sfondo trasparente */
+    border: 0; /* elimino i bordi */
+    border-bottom: 2px solid #D20094; /* bordo inferiore */
+    width: 60%;
+    margin: 3em 15% ;
+    color: white;
+}
+
+#sezioneStelle {
+    margin: 1.5em 0 4em 0;
+}
+
+#bottonedisabilitato {
+    position: absolute; /* Posiziona il bottone in modo assoluto */
+    right: 0; /* Posiziona il bottone al bordo destro */
+    padding: 1em 3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: auto;
+    background-color: #00ffff51;
+    color: black;
+    cursor: pointer;
+    border-style:initial;
+}
